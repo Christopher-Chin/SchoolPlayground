@@ -13,15 +13,21 @@ class School(val name:String, val address:String, val principal:String) {
 
     fun showStudentList(){
         for(i in studentList){
-            print( "ID: ${i.id}\nName: ${i.name}\nYear Level: ${i.yearLevel}\n\n")
+            println( "ID: ${i.id}\nName: ${i.name}\nYear Level: ${i.yearLevel}\n\n")
         }
     }
 
     fun removeStudent(compare:String){
+        var student:Student? = null
+
         for(i in studentList){
-            if(compare == i.name){
-                studentList.remove(i)
+            if(compare.equals(i.name)){
+                student = i
             }
+        }
+
+        if(student != null){
+            studentList.remove(student)
         }
     }
 }

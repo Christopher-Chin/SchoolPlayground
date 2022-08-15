@@ -88,7 +88,7 @@ fun main(args: Array<String>) {
 
         }
 
-        return
+
     }
 
     mainMenu()
